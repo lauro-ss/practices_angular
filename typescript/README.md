@@ -1,5 +1,5 @@
 # How to Install
-### It's necessary have <a href="https://nodejs.org/en">node.js</a> installed, after install runs as follow:
+### It's necessary have <a href="https://nodejs.org/en" target="_blank">node.js</a> installed, after install runs as follow:
 
 #### Install typescript cli globally, case if you don't want to use global, remove the `-g` flag
 `npm install -g typescript`
@@ -24,5 +24,5 @@
 - #### class
 
 ## Util links
-- #### <a href="https://www.typescriptlang.org/docs/">TypeScript Documentation</a> 
-- #### <a href="https://www.w3schools.com/typescript/index.php">W3School TypeScript Tutorial</a> 
+- #### <a href="https://www.typescriptlang.org/docs/" target="_blank">TypeScript Documentation</a> 
+- #### <a href="https://www.w3schools.com/typescript/index.php" target="_blank">W3School TypeScript Tutorial</a> 
