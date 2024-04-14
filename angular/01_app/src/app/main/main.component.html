@@ -6,7 +6,7 @@
 <button  (click)="getAnimals(animalInput.value)">Search</button>
 
 <ul>
-    <li *ngFor="let animal of result">
+    <li *ngFor="let animal of (result != null ? result : animals)">
         {{ animal.id }}
         {{ animal.name }}
         {{ animal.status }}

@@ -31,7 +31,7 @@ export class MainComponent {
       alive: false
     },
   ];
-  result: Animal[] = [];
+  result?: Animal[];
 
   getAnimals(n: string) {
     n = n.toLowerCase();

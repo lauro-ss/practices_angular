@@ -1,2 +1,10 @@
-<p>animal-details works!</p>
+<div *ngIf="animal; else elseBlock">
+    <p>{{ animal.id }}</p>
+    <p>{{ animal.name }}</p>
+    <p>{{ animal.status }}</p>
+    <p>{{ animal.alive }}</p>
+</div>
+<ng-template #elseBlock>
+    not found
+</ng-template>
 <a [routerLink] = "['']">Voltar</a>
