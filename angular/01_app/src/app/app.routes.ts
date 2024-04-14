@@ -4,5 +4,9 @@ import { AnimalDetailsComponent } from './animal-details/animal-details.componen
 
 export const routes: Routes = [
     { path: "", component: MainComponent },
-    { path: "animal/:animalId", component: AnimalDetailsComponent }
+    { 
+        path: "animal/:animalId", 
+        //lazy loading
+        loadComponent: () => import("./animal-details/animal-details.component").then(c => c.AnimalDetailsComponent)
+    }
 ];
