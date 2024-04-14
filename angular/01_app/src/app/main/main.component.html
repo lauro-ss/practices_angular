@@ -1,1 +1,20 @@
-<p *ngFor="let animal of animalList">{{animal}}</p>
+<form>
+
+</form>
+<label for="searchAnimal">Animal</label>
+<input  id="searchAnimal" placeholder="Cat" #animalInput />
+<button  (click)="getAnimals(animalInput.value)">Search</button>
+
+<ul>
+    <li *ngFor="let animal of result">
+        {{ animal.id }}
+        {{ animal.name }}
+        {{ animal.status }}
+        {{ animal.alive }}
+        <a [title]="animal.name"
+           [routerLink]="['/animal/', animal.id]"
+        >
+            Details
+        </a>
+    </li>
+</ul>
