@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="name">Name</label>
+    <input id="name" formControlName="name"/>
+    @if(form.controls.name.invalid && (form.controls.name.touched || form.controls.name.dirty)) {
+        @if(form.controls.name.errors?.['required']) {
+            <span>Name is required</span>
+        }
+        @if(form.controls.name.errors?.['minlength']) {
+            <span>Name needs have more than 3</span>
+        }
+    }
+
+    <label for="status">Status</label>
+    <select id="status" formControlName="status">
+        <option value="">Select a Status</option>
+        <option value="eating">Eating</option>
+        <option value="sleeping">Sleeping</option>
+    </select>
+
+    <label for="alive">Alive</label>
+    <input id="alive" type="checkbox" formControlName="alive"/>
+
+    <button type="submit" [disabled]="!form.valid">Create Animal</button>
+</form>

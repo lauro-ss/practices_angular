@@ -2,13 +2,14 @@ import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Animal } from '../interface/animal';
+import { AnimalCreateComponent } from "../animal-create/animal-create.component";
 
 @Component({
-  selector: 'app-main',
-  standalone: true,
-  imports: [NgFor, RouterModule],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+    selector: 'app-main',
+    standalone: true,
+    templateUrl: './main.component.html',
+    styleUrl: './main.component.css',
+    imports: [NgFor, RouterModule, AnimalCreateComponent]
 })
 export class MainComponent {
   animals: Animal[] = [
