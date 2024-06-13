@@ -1,27 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Rato = /** @class */ (function () {
-    function Rato(name, id) {
-        var _this = this;
-        this.toString = function () { return _this.name; };
+const animal_1 = require("./src/animal");
+class Rato {
+    constructor(name, id) {
+        this.toString = () => { return this.name; };
         this.name = name;
         this.id = id;
     }
-    Rato.prototype.getId = function () {
+    getId() {
         return this.id;
-    };
-    return Rato;
-}());
+    }
+}
 function main() {
-    var rato = new Rato("Rato", 25);
-    console.log(rato, isInt(rato.getId()));
-    var list = [1, 2, 3, 4, 5];
-    console.log(list.map(function (e) { return e == 1 ? "sim" : "não"; }));
+    let rato = new Rato("Rato", 25);
+    let a = rato;
+    console.log(a);
+    const list = [1, 2];
+    console.log((0, animal_1.Sum)(...list));
+    console.log((0, animal_1.Odds)(...list));
+    console.log((0, animal_1.Evens)(...list));
+    console.log(rato.toString());
+    console.log(list.map((e) => { return e == 1 ? "sim" : "não"; }));
 }
 function isInt(i) {
-    var a = [1, 0, -1];
-    var r = i % 2;
-    console.log(a.map(function (e) { return e == r; }));
+    let a = [1, 0, -1];
+    const r = i % 2;
+    console.log(a.map((e) => { return e == r; }));
     // return a.map((e, r = i % 2) => { return e == r })
     return true;
 }

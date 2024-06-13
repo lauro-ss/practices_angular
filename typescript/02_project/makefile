@@ -1,10 +1,9 @@
-.SILENT:
 .PHONY: all
 
 all: build run
 
 build:
-	tsc main.ts
+	@tsc
 
 run:
-	node main
+	@node main

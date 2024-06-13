@@ -22,6 +22,10 @@ export class AnimalCreateComponent {
     alive: [true]
   });
 
+  load() {
+    console.log("teste");
+  }
+
   onSubmit() {
     console.log(this.form.value.name)
     console.log(this.form.value.status)

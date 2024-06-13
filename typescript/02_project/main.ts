@@ -1,12 +1,9 @@
 export {}
-
-interface Animal {
-    name: string;
-}
+import { Animal, Sum, Odds, Evens } from "./src/animal"
 
 class Rato {
-    private name: string;
-    private id: number;
+    public name: string;
+    public id: number;
 
     constructor(name: string, id: number) {
         this.name = name;
@@ -22,10 +19,16 @@ class Rato {
 
 function main() {
     let rato = new Rato("Rato", 25);
+    let a:Animal = rato
+    
+    console.log(a)
+    const list = [1,2];
 
-    console.log(rato, isInt(rato.getId()));
+    console.log(Sum(...list))
+    console.log(Odds(...list))
+    console.log(Evens(...list))
 
-    const list = [1,2,3,4,5];
+    console.log(rato.toString())
 
     console.log(list.map((e) => { return e == 1 ? "sim" : "não" }))
 }
